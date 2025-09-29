@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock pappers scissors</title>
+    <link rel="stylesheet" href="12-r-p-s.css">
+  </head>
+  <body>
+
+  <div class="rps">
+      
+        <p class="title"> Rock Papper Scissors</p>
+      <div>
+        <button class="move-button" onclick="
+        playGame('Rock')
+        ">
+        <img src="icon/Rock.png" alt="rock" class="move-icon">
+      
+      </button>
+
+      <button class="move-button" onclick="
+      playGame('Paper')
+      ">
+      <img src="icon/Paper.png" alt="papper" class="move-icon">
+    </button>
+
+      <button class="move-button" onclick="
+      playGame('Scissors');
+      ">
+        <img src="icon/Scissors.png" alt="papper" class="move-icon">  
+    </button>
+
+      </div>
+      <p class="js-result result"></p>
+      <div>
+      <p class="js-moves"></p>
+    </div>
+    <p class="js-score score"></p>
+      
+    <div>
+      <button onclick="
+      score.losses = 0;
+      score.wins = 0;
+      score.ties = 0;
+    
+      updateScoreElement();
+      localStorage.removeItem('score');
+      " class="reset-score-button">Reset Score</button>
+
+      <button class="auto-play-button" onclick="
+      autoPlay();
+      ">Auto Play</button>
+
+    </div>
+      
+    <script src="12-r-p-s.js"></script>
+  </div>
+  </body>
+</html>
